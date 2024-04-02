@@ -4,9 +4,8 @@ def set_locations(key = None):
     locatios = {
         1: "8ª/AJ - Sala 302 - 8ª/AJ",
         2: "8ª/CP - Sala 101 - 8ª/CP",
-        3: "8ª/GB - Sala 205 - Reunião",
-        4: "8ª/GB - Sala 304-A - 8ª/GB",
-        5: "8ª/GRA - Sala 301 - 8ª/GRA",
+        3: "8ª/GB - Sala 304-A - 8ª/GB",
+        4: "8ª/GRA - Sala 301 - 8ª/GRA",
         5: "8ª/GRA/USA - Sala T02 - 8ª / GRA/USA",
         6: "8ª/GRD - Sala 203 - 8ª/GRD",
         7: "8ª/GRG - Sala 103 - 8ª/GRG",

@@ -13,9 +13,9 @@ position_service = 2405,413
 position_applicant = 2033,568
 position_email = 2685,595
 position_not_email = 2678,616
-position_location = 2404,884
+position_location = 2404,882
 position_description = 2161,678
-position_continue = 2321,919
+position_continue = 2319,927
 
 for _ in range(amount):
     # Categoria
@@ -26,7 +26,7 @@ for _ in range(amount):
     sleep(1)
     pyautogui.press('enter')
 
-    sleep(2)
+    sleep(3)
     # Requerente
     applicant = 'glpi'
     pyperclip.copy(applicant)
@@ -34,7 +34,7 @@ for _ in range(amount):
     pyautogui.hotkey('ctrl', 'v')
     sleep(1)
     pyautogui.press('enter')
-
+    sleep(1)
     # Acompanhar por e-mail
     pyautogui.click(position_email, duration=1)
     # Marca como não
@@ -50,6 +50,8 @@ for _ in range(amount):
     sleep(1)
     pyautogui.press('enter')
 
+    sleep(1)
+    
     pyautogui.click(2221,884, duration=1)
     pyautogui.hotkey('space')
 
@@ -61,4 +63,4 @@ for _ in range(amount):
 
     # # finalizar o chamado e começa o proximo
     pyautogui.click(position_continue, duration=1)
-    sleep(3)
+    sleep(5)

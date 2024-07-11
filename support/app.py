@@ -9,13 +9,13 @@ from time import sleep
 amount = int(input('Define the number of tickets to be opened: '))
 
 # Definir a localizacao de cada campo
-position_service = 2405,413
-position_applicant = 2033,568
-position_email = 2685,595
-position_not_email = 2678,616
-position_location = 2404,882
-position_description = 2161,678
-position_continue = 2319,927
+position_service = 1045,384
+position_applicant = 668,559
+position_email = 1322,592
+position_not_email = 1318,611
+position_location = 1039,895
+position_description = 859,635
+position_continue = 951,910
 
 for _ in range(amount):
     # Categoria
@@ -40,7 +40,7 @@ for _ in range(amount):
     # Marca como não
     pyautogui.click(position_not_email, duration=1)
 
-    pyautogui.click(2279,710, duration=1)
+    pyautogui.click(940,703, duration=1)
 
     # # Localizacao
     location = set_locations()
@@ -52,7 +52,7 @@ for _ in range(amount):
 
     sleep(1)
     
-    pyautogui.click(2221,884, duration=1)
+    pyautogui.click(940,703, duration=1)
     pyautogui.hotkey('space')
 
     # Descricao

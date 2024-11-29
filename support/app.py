@@ -28,7 +28,7 @@ for _ in range(amount):
     sleep(2)
 
     #categoria
-    service = set_service()
+    service = set_service(12)
     pyperclip.copy(service)
     pyautogui.click(1599,365, duration=1)
     pyautogui.hotkey('ctrl', 'v')
@@ -42,7 +42,7 @@ for _ in range(amount):
     pyautogui.click(1576,607, duration=1)
 
     #Localização
-    location = set_locations()
+    location = set_locations(9)
     pyperclip.copy(location)
     pyautogui.click(1576,695, duration=1)
     pyautogui.hotkey('ctrl', 'v')
@@ -72,18 +72,6 @@ for _ in range(amount):
     pyautogui.click(1569,739, duration=1)
     pyautogui.click(1395,472, duration=1)
 
-    sleep(1)
-
-    pyautogui.hotkey('space')
-
-    sleep(1)
-    # atribuído
-    assigned = 'N2 - 8ª Regional'
-    pyperclip.copy(assigned)
-    pyautogui.click(1613,472, duration=1)
-    pyautogui.hotkey('ctrl', 'v')
-    sleep(1)
-    pyautogui.press('enter')
     sleep(1)
 
     # Descricao

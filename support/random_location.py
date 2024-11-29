@@ -9,7 +9,8 @@ def set_locations(key = None):
         5: "8ª/GRD",
         6: "8ª/GRG",
         7: "8ª/GRR",
-        8: "8ª/SL"
+        8: "8ª/SL",
+        9: "8ª/GRS"
     }
     
     if key is None:

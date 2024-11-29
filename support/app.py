@@ -9,71 +9,92 @@ from time import sleep
 
 amount = int(input('Define the number of tickets to be opened: '))
 
-# Definir a localizacao de cada campo
-position = 972,359
-position_service = 1034,411
-position_applicant = 715,564
-position_email = 1323,595
-position_not_email = 1315,618
-position_location = 1046,887
-position_description = 781,706
-position_continue = 950,956
-
 chrome_path = '/usr/bin/google-chrome %s'  # No Linux, altere o caminho se necessário
 
-url = 'https://glpi.codevasf.gov.br/front/ticket.form.php'
+url = 'https://atendimentoti.codevasf.gov.br/front/ticket.form.php'
 
 webbrowser.get(chrome_path).open(url)
 
 # Categoriaglpi
-sleep(1)
+sleep(2)
 
-pyautogui.click(position, duration=1)
+pyautogui.click(1383,296, duration=1)
 
 for _ in range(amount):
 
+    #tipo
+    pyautogui.click(1600,322, duration=1)
+    pyautogui.click(1607,386, duration=1)
+    sleep(2)
 
-    # Categoriaglpi
+    #categoria
     service = set_service()
     pyperclip.copy(service)
-    pyautogui.click(position_service, duration=1)
+    pyautogui.click(1599,365, duration=1)
     pyautogui.hotkey('ctrl', 'v')
-    sleep(1)
+    sleep(2)
     pyautogui.press('enter')
 
     sleep(3)
-    # Requerente
-    applicant = 'glpi'
-    pyperclip.copy(applicant)
-    pyautogui.click(position_applicant, duration=1)
-    pyautogui.hotkey('ctrl', 'v')
-    sleep(1)
-    pyautogui.press('enter')
-    sleep(1)
-    # Acompanhar por e-mail
-    pyautogui.click(position_email, duration=1)
-    # Marca como não
-    pyautogui.click(position_not_email, duration=1)
 
-    # # Localizacao
+    #status
+    pyautogui.click(1601,450, duration=1)
+    pyautogui.click(1576,607, duration=1)
+
+    #Localização
     location = set_locations()
     pyperclip.copy(location)
-    pyautogui.click(position_location, duration=1)
+    pyautogui.click(1576,695, duration=1)
     pyautogui.hotkey('ctrl', 'v')
     sleep(1)
     pyautogui.press('enter')
 
+    pyautogui.click(1390,672, duration=1)
     sleep(1)
-    
-    pyautogui.click(940,703, duration=1)
     pyautogui.hotkey('space')
+
+    # Requerente
+    applicant = '60934194360'
+    pyperclip.copy(applicant)
+    pyautogui.click(1463,278, duration=1)
+    pyautogui.hotkey('ctrl', 'v')
+    sleep(1)
+    pyautogui.press('enter')
+    sleep(2)
+
+    #date
+    pyautogui.click(1568,319, duration=1)
+    pyautogui.click(1583,693, duration=1)
+    pyautogui.click(1395,472, duration=1)
+
+    #date solução
+    pyautogui.click(1586,362, duration=1)
+    pyautogui.click(1569,739, duration=1)
+    pyautogui.click(1395,472, duration=1)
+
+    sleep(1)
+
+    pyautogui.hotkey('space')
+
+    sleep(1)
+    # atribuído
+    assigned = 'N2 - 8ª Regional'
+    pyperclip.copy(assigned)
+    pyautogui.click(1613,472, duration=1)
+    pyautogui.hotkey('ctrl', 'v')
+    sleep(1)
+    pyautogui.press('enter')
+    sleep(1)
 
     # Descricao
     description = set_description(service)
     pyperclip.copy(description)
-    pyautogui.click(position_description, duration=1)
+    pyautogui.click(514,516, duration=1)
     pyautogui.hotkey('ctrl', 'v')
+    sleep(1)
+    pyautogui.press('enter')
+    sleep(1)
 
-    # # finalizar o chamado e começa o proximo
-    pyautogui.click(position_continue, duration=1)
+    # finalizar o chamado e começa o proximo
+    pyautogui.click(1809,998, duration=1)
     sleep(5)

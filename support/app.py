@@ -28,7 +28,7 @@ for _ in range(amount):
     sleep(2)
 
     #categoria
-    service = set_service(12)
+    service = set_service()
     pyperclip.copy(service)
     pyautogui.click(1599,365, duration=1)
     pyautogui.hotkey('ctrl', 'v')
@@ -42,7 +42,7 @@ for _ in range(amount):
     pyautogui.click(1576,607, duration=1)
 
     #Localização
-    location = set_locations(9)
+    location = set_locations()
     pyperclip.copy(location)
     pyautogui.click(1576,695, duration=1)
     pyautogui.hotkey('ctrl', 'v')
